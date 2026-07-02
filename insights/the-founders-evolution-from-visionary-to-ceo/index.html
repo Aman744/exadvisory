@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXAdvisory — Transform to Perform</title>
+  <link rel="icon" type="image/png" href="../../images/logo/favicon.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <a href="../../">
+        <img src="../../images/logo/logo.png" alt="EXAdvisory">
+      </a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../../">Home</a></li>
+      <li><a href="../../our-4x-anchor/">Our 4x Anchor</a></li>
+      <li><a href="../../services/">Services</a></li>
+      <li><a href="../../insights/">Insights</a></li>
+      <li><a href="../../about/">About</a></li>
+      <li><a href="../../contact/">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- BLOG ARTICLE -->
+  <section class="blog-hero">
+    <div class="blog-container">
+
+      <p class="blog-category">Insights</p>
+
+      <h1 class="blog-title">
+        The Founder’s Evolution: From Visionary to CEO
+      </h1>
+
+      <div class="blog-meta">
+        <span>EXAdvisory</span>
+        <span>•</span>
+        <span>Insights</span>
+      </div>
+
+      <img src="../../images/insight/insight-5.jpg" alt="The Founder’s Evolution" class="blog-featured-image" />
+
+      <div class="blog-content">
+
+        <p>
+          The journey of a startup founder is characterized by innovation and an unwavering vision. However, as a
+          business progresses beyond its initial stages, the founder’s role must evolve from that of an innovator to a
+          strategic leader. This transition is critical for sustaining growth, scaling operations, and securing a return
+          on investment for stakeholders. The failure of many startups can be attributed to leadership gaps and a lack
+          of effective team execution, highlighting the necessity of a founder’s personal and professional development.
+        </p>
+
+        <p>
+          At EXAdvisory, our mission is to catalyze this essential transition. We equip founders with the capabilities
+          to become effective CEOs who can navigate complex challenges and lead their organizations toward long-term
+          success. Our framework focuses on a 4X Leadership Growth model, which addresses four key dimensions: Personal,
+          Team, Business, and Purpose. By strengthening these areas, we bridge the gap between a visionary founder and a
+          great CEO, ensuring that the company is built on a foundation of robust leadership.
+        </p>
+
+        <p>
+          Our approach is designed to mitigate the significant risks associated with leadership deficiencies. Statistics
+          indicate that a large percentage of venture-backed startups fail to return capital, underscoring the high
+          stakes involved. We provide targeted support to help founders refine their strategic prioritization, enhance
+          their decision-making processes, and optimize their delegation strategies. This process is not merely about
+          business strategy; it is about the founder’s holistic development, enabling them to lead with clarity and
+          conviction. By investing in the founder’s growth, we safeguard the investment, accelerate portfolio valuation,
+          and establish a clear path for sustained corporate performance.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="../../images/logo/logo.png" alt="EXAdvisory" />
+    <p>Transform to Perform · Dubai, UAE · DDA Licensed</p>
+    <p>© 2026 EXAdvisory. All rights reserved.</p>
+  </footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+
+      menuToggle.innerHTML =
+        navLinks.classList.contains('active')
+          ? '✕'
+          : '☰';
+    });
+
+    menuOverlay.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      menuToggle.innerHTML = '☰';
+    });
+  </script>
+</body>
+
+</html>

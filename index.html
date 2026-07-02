@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXAdvisory — Transform to Perform</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./images/logo/favicon.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <a href="./">
+        <img src="./images/logo/logo.png" alt="EXAdvisory">
+      </a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./">Home</a></li>
+      <li><a href="./our-4x-anchor/">Our 4x Anchor</a></li>
+      <li><a href="./services/">Services</a></li>
+      <li><a href="./insights/">Insights</a></li>
+      <li><a href="./about/">About</a></li>
+      <li><a href="./contact/">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <!-- HERO -->
+  <section class="hero">
+
+
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <p class="hero-eyebrow">Practitioner-Led Executive Advisory</p>
+
+      <h1>
+        Transform to <em>Perform.</em><br>
+        Perform to <em>Transform.</em>
+      </h1>
+
+      <p class="hero-sub">
+        EXAdvisory empowers Boards, CEOs, and their leadership teams to seamlessly integrate
+        business performance with business transformation — simultaneously, not sequentially.
+      </p>
+
+      <a href="./services" class="hero-cta">
+        Explore Our Services
+      </a>
+    </div>
+
+  </section>
+
+  <!-- BELIEF -->
+  <div class="belief">
+    <blockquote>
+      "Leaders and Companies must simultaneously PERFORM &amp; TRANSFORM. We believe in empowering Boards,
+      CEOs and their teams to seamlessly transition between business performance and business transformation."
+    </blockquote>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="./images/logo/logo.png" alt="EXAdvisory" />
+    <p>Transform to Perform · Dubai, UAE · DDA Licensed</p>
+    <p>© 2026 EXAdvisory. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+
+      menuToggle.innerHTML =
+        navLinks.classList.contains('active')
+          ? '✕'
+          : '☰';
+    });
+
+    menuOverlay.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      menuToggle.innerHTML = '☰';
+    });
+  </script>
+
+</body>
+
+</html>

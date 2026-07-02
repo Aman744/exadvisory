@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXAdvisory — Transform to Perform</title>
+  <link rel="icon" type="image/png" href="../images/logo/favicon.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <a href="../">
+        <img src="../images/logo/logo.png" alt="EXAdvisory">
+      </a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../">Home</a></li>
+      <li><a href="../our-4x-anchor/">Our 4x Anchor</a></li>
+      <li><a href="../services/">Services</a></li>
+      <li><a href="../insights/">Insights</a></li>
+      <li><a href="../about/">About</a></li>
+      <li><a href="../contact/">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- 4X FRAMEWORK -->
+  <section class="section" id="framework">
+    <div style="max-width:1200px;margin:0 auto">
+      <p class="section-label">Our Proprietary Model</p>
+      <h2 class="section-title">The 4X Leadership Framework</h2>
+      <p class="section-intro">All EXAdvisory services are anchored to the 4X Leadership Framework — four interconnected
+        dimensions that every high-performing leader and organization must master simultaneously.</p>
+      <div class="framework-grid">
+        <div class="fx-card" data-num="1">
+          <p class="fx-tag">1X</p>
+          <h3>Business Leadership<br />Strategy to Execution</h3>
+          <p>We help you transform strategic vision into operational reality. Clear strategic focus, fundamental
+            choices, and practical execution capabilities — helping organizations navigate complexity while maintaining
+            simplicity in strategic direction.</p>
+          <p class="fx-dimension">↗ Business</p>
+        </div>
+        <div class="fx-card" data-num="2">
+          <p class="fx-tag">2X</p>
+          <h3>Purpose Leadership<br />Your Organization's North Star</h3>
+          <p>Purpose drives performance. The Why of doing things will generate Profit as a result. We help organizations
+            define and embed their North Star — a compelling purpose that guides decisions and engages all stakeholders.
+          </p>
+          <p class="fx-dimension">↗ Purpose</p>
+        </div>
+        <div class="fx-card" data-num="3">
+          <p class="fx-tag">3X</p>
+          <h3>Personal Leadership<br />Being Your Best Self</h3>
+          <p>Leadership begins with self-awareness. We help leaders understand their natural inclinations, leverage
+            their strengths, and address growth areas — developing authentic styles and aligning actions with values.
+          </p>
+          <p class="fx-dimension">↗ Self</p>
+        </div>
+        <div class="fx-card" data-num="4">
+          <p class="fx-tag">4X</p>
+          <h3>TOP Team Leadership<br />High-Performing C-Level Teams</h3>
+          <p>Great teams are built through deliberate effort. We assess TOP Team effectiveness and organizational impact
+            — producing data-driven insights through personalized engagement and action-oriented workshops.</p>
+          <p class="fx-dimension">↗ Team</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="../images/logo/logo.png" alt="EXAdvisory" />
+    <p>Transform to Perform · Dubai, UAE · DDA Licensed</p>
+    <p>© 2026 EXAdvisory. All rights reserved.</p>
+  </footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+
+      menuToggle.innerHTML =
+        navLinks.classList.contains('active')
+          ? '✕'
+          : '☰';
+    });
+
+    menuOverlay.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      menuToggle.innerHTML = '☰';
+    });
+  </script>
+</body>
+
+</html>

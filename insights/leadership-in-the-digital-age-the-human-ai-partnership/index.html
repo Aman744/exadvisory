@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXAdvisory — Transform to Perform</title>
+  <link rel="icon" type="image/png" href="../../images/logo/favicon.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <a href="../../">
+        <img src="../../images/logo/logo.png" alt="EXAdvisory">
+      </a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../../">Home</a></li>
+      <li><a href="../../our-4x-anchor/">Our 4x Anchor</a></li>
+      <li><a href="../../services/">Services</a></li>
+      <li><a href="../../insights/">Insights</a></li>
+      <li><a href="../../about/">About</a></li>
+      <li><a href="../../contact/">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- BLOG ARTICLE -->
+  <section class="blog-hero">
+    <div class="blog-container">
+
+      <p class="blog-category">Insights</p>
+
+      <h1 class="blog-title">
+        The 4X Leadership Framework:
+        Building High-Performing Leaders & Organizations
+      </h1>
+
+      <div class="blog-meta">
+        <span>EXAdvisory</span>
+        <span>•</span>
+        <span>Insights</span>
+      </div>
+
+      <img src="../../images/insight/insight-1.jpg" alt="4X Leadership Framework" class="blog-featured-image" />
+
+      <div class="blog-content">
+
+        <p>
+          The modern business landscape is undergoing a profound transformation driven by the integration of human and
+          artificial intelligence. This shift presents a new leadership paradigm that requires a unique blend of
+          strategic foresight and a people-centric approach. At EXAdvisory, we recognize that the future of work hinges
+          on the symbiotic relationship between human and AI capabilities.
+        </p>
+
+        <p>
+          Our practitioner, Michael Schulz, is a leader in this area, serving as a fractional Chief People and AI
+          Integration Officer. In this capacity, he partners with organizations to maximize the financial performance
+          and return on investment from a combined human and AI workforce. His profound expertise in aligning business
+          strategy with operating models, organizational design, and talent is invaluable for navigating this emerging
+          frontier.
+        </p>
+
+        <p>
+          This integration is not simply a technological undertaking; it is a complex leadership challenge that requires
+          a deep understanding of organizational change management and human capital strategy. Michael’s experience
+          across diverse industries and ownership structures allows him to provide strategic guidance on how to
+          effectively manage this transition, ensuring that as technology advances, the human element remains a core
+          driver of value.
+        </p>
+
+        <p>
+          The Human + AI partnership exemplifies EXAdvisory’s mission to provide insights into the complex relationship
+          between people and business. This approach helps unlock significant potential for business improvement and
+          transformation. By focusing on this synergy, we help our clients build agile and innovative workforces that
+          are prepared for the future, demonstrating that strategic thinking and a focus on human capital are essential
+          for success in the digital age.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="../../images/logo/logo.png" alt="EXAdvisory" />
+    <p>Transform to Perform · Dubai, UAE · DDA Licensed</p>
+    <p>© 2026 EXAdvisory. All rights reserved.</p>
+  </footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+
+      menuToggle.innerHTML =
+        navLinks.classList.contains('active')
+          ? '✕'
+          : '☰';
+    });
+
+    menuOverlay.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      menuToggle.innerHTML = '☰';
+    });
+  </script>
+</body>
+
+</html>

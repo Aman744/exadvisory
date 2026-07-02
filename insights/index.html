@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXAdvisory — Transform to Perform</title>
+  <link rel="icon" type="image/png" href="../images/logo/favicon.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <a href="../">
+        <img src="../images/logo/logo.png" alt="EXAdvisory">
+      </a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../">Home</a></li>
+      <li><a href="../our-4x-anchor/">Our 4x Anchor</a></li>
+      <li><a href="../services/">Services</a></li>
+      <li><a href="../insights/">Insights</a></li>
+      <li><a href="../about/">About</a></li>
+      <li><a href="../contact/">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+
+  <section class="section section-alt insights-section" style="margin-top:25px">
+
+    <div style="max-width:1200px;margin:0 auto">
+      <p class="section-label">Executive Thinking for a Changing World</p>
+      <h2 class="section-title">Insights</h2>
+      <p class="section-intro">From leadership and strategy to governance, transformation, and geopolitical foresight,
+        EXAdvisory Insights provides practical perspectives that help leaders anticipate change, navigate complexity,
+        and drive sustainable performance.</p>
+
+      <div class="insights-grid" style="padding-top:40px">
+
+        <!-- CARD 1 -->
+        <article class="insight-card">
+          <a href="./leadership-in-the-digital-age-the-human-ai-partnership/" class="card-link">
+
+            <img src="../images/insight/insight-1.jpg" alt="Leadership in the Digital Age">
+
+            <div class="overlay"></div>
+
+            <div class="content">
+              <div class="meta">
+                <span class="category">INSIGHTS</span>
+                <span>•</span>
+                <span>September 14, 2025</span>
+              </div>
+
+              <h4>
+                Leadership in the Digital Age: The Human + AI Partnership
+              </h4>
+
+              <span class="arrow">→</span>
+            </div>
+
+          </a>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="insight-card">
+          <a href="./strategy-to-reality-from-vision-to-execution/" class="card-link">
+
+            <img src="../images/insight/insight-2.jpg" alt="Strategy to Reality">
+
+            <div class="overlay"></div>
+
+            <div class="content">
+              <div class="meta">
+                <span class="category">INSIGHTS</span>
+                <span>•</span>
+                <span>September 14, 2025</span>
+              </div>
+
+              <h4>
+                Strategy to Reality: From Vision to Execution
+              </h4>
+
+              <span class="arrow">→</span>
+            </div>
+
+          </a>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="insight-card">
+          <a href="./building-high-performing-teams-that-outperform/" class="card-link">
+
+            <img src="../images/insight/insight-3.jpg" alt="Building High-Performing Teams">
+
+            <div class="overlay"></div>
+
+            <div class="content">
+              <div class="meta">
+                <span class="category">INSIGHTS</span>
+                <span>•</span>
+                <span>September 14, 2025</span>
+              </div>
+
+              <h4>
+                Building High-Performing Teams That Outperform
+              </h4>
+
+              <span class="arrow">→</span>
+            </div>
+
+          </a>
+        </article>
+
+        <!-- CARD 4 -->
+        <article class="insight-card">
+          <a href="./the-power-of-purpose-guiding-your-organizations-north-star/" class="card-link">
+
+            <img src="../images/insight/insight-4.jpg" alt="Purpose Leadership">
+
+            <div class="overlay"></div>
+
+            <div class="content">
+              <div class="meta">
+                <span class="category">INSIGHTS</span>
+                <span>•</span>
+                <span>September 14, 2025</span>
+              </div>
+
+              <h4>
+                The Power of Purpose:
+                Guiding Your Organization’s
+                North Star
+              </h4>
+
+              <span class="arrow">→</span>
+            </div>
+
+          </a>
+        </article>
+
+        <!-- CARD 5 -->
+        <article class="insight-card">
+          <a href="./the-founders-evolution-from-visionary-to-ceo/" class="card-link">
+
+            <img src="../images/insight/insight-5.jpg" alt="Founder Evolution">
+
+            <div class="overlay"></div>
+
+            <div class="content">
+              <div class="meta">
+                <span class="category">INSIGHTS</span>
+                <span>•</span>
+                <span>September 14, 2025</span>
+              </div>
+
+              <h4>
+                The Founder’s Evolution:
+                From Visionary to CEO
+              </h4>
+
+              <span class="arrow">→</span>
+            </div>
+
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="../images/logo/logo.png" alt="EXAdvisory" />
+    <p>Transform to Perform · Dubai, UAE · DDA Licensed</p>
+    <p>© 2026 EXAdvisory. All rights reserved.</p>
+  </footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+
+      menuToggle.innerHTML =
+        navLinks.classList.contains('active')
+          ? '✕'
+          : '☰';
+    });
+
+    menuOverlay.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      menuToggle.innerHTML = '☰';
+    });
+  </script>
+</body>
+
+</html>

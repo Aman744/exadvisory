@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXAdvisory — Transform to Perform</title>
+  <link rel="icon" type="image/png" href="../images/logo/favicon.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <a href="../">
+        <img src="../images/logo/logo.png" alt="EXAdvisory">
+      </a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../">Home</a></li>
+      <li><a href="../our-4x-anchor/">Our 4x Anchor</a></li>
+      <li><a href="../services/">Services</a></li>
+      <li><a href="../insights/">Insights</a></li>
+      <li><a href="../about/">About</a></li>
+      <li><a href="../contact/">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <h2>Every CXO Deserves a Partner<br />Who Helps Them Lead at Their Best</h2>
+    <p>Whether you're a Board seeking succession clarity, a CEO navigating transformation, or an organization preparing
+      for geopolitical disruption — EXAdvisory is your practitioner-led partner.</p>
+    <a href="mailto:hello@exadvisory.co" class="cta-btn">Start a Conversation</a>
+    <span class="cta-email">or email us directly at <a href="mailto:hello@exadvisory.co">hello@exadvisory.co</a></span>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="../images/logo/logo.png" alt="EXAdvisory" />
+    <p>Transform to Perform · Dubai, UAE · DDA Licensed</p>
+    <p>© 2026 EXAdvisory. All rights reserved.</p>
+  </footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+
+      menuToggle.innerHTML =
+        navLinks.classList.contains('active')
+          ? '✕'
+          : '☰';
+    });
+
+    menuOverlay.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      menuToggle.innerHTML = '☰';
+    });
+  </script>
+</body>
+
+</html>
