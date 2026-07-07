@@ -301,6 +301,73 @@ nav {
   max-width: 660px;
   line-height: 1.85;
 }
+.svc-icon {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #1b365d, #0f5fa6);
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 20px;
+  box-shadow: 0 12px 30px rgba(15, 95, 166, 0.18);
+  transition: all 0.35s ease;
+}
+
+.svc-card:hover .svc-icon {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 18px 40px rgba(15, 95, 166, 0.28);
+}
+.nav-links .dropdown {
+  position: relative;
+}
+
+.nav-links .dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 260px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  padding: 10px 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.25s ease;
+  z-index: 1000;
+}
+
+.nav-links .dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #1b365d;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f7fa;
+}
+
+.dropdown > a i {
+  font-size: 12px;
+  margin-left: 6px;
+}
 
 /* ── 4X FRAMEWORK ── */
 .framework-grid {
