@@ -91,8 +91,102 @@ nav {
   font-size: 1.8rem;
   cursor: pointer;
 }
+/* ================================
+   MAIN DROPDOWN
+================================ */
+
+.nav-links .dropdown {
+  position: relative;
+}
+
+.nav-links .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  min-width: 260px;
+  margin: 0;
+  padding: 8px 0;
+
+  list-style: none;
+  background: #fff;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition: all 0.25s ease;
+
+  z-index: 9999;
+}
+
+/* Show Services dropdown */
+.nav-links .dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ================================
+   DROPDOWN LINKS
+================================ */
+
+.nav-links .dropdown-menu li {
+  position: relative;
+  list-style: none;
+}
+
+.nav-links .dropdown-menu li > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 18px;
+  white-space: nowrap;
+}
+
+/* ================================
+   SIGNATURE SERVICES SUBMENU
+================================ */
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .submenu {
+  position: absolute;
+  top: 40px;
+  left: 40%;
+  min-width: 290px;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  background: #181818;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all 0.25s ease;
+  z-index: 10000;
+}
+
+/* Show submenu when hovering Signature Services */
+.dropdown-submenu:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Arrow */
+.dropdown-submenu > a .fa-chevron-right {
+  font-size: 10px;
+  margin-left: 15px;
+}
 
 @media (max-width: 768px) {
+  /* ==========================================
+     MOBILE NAVBAR
+  ========================================== */
+
   nav {
     height: 70px;
     padding: 0 20px;
@@ -100,41 +194,227 @@ nav {
 
   .menu-toggle {
     display: block;
-    z-index: 101;
+    z-index: 1002;
+    position: relative;
   }
+
+  /* ==========================================
+     MOBILE SIDE MENU
+  ========================================== */
 
   .nav-links {
     position: fixed;
     top: 70px;
     right: -100%;
-    width: 280px;
+
+    width: 300px;
+    max-width: 85vw;
     height: calc(100vh - 70px);
 
     background: #111;
 
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0;
 
-    padding: 30px;
+    gap: 0;
+    padding: 20px 0;
+
+    overflow-y: auto;
 
     transition: right 0.3s ease;
+
     border-left: 1px solid rgba(239, 113, 6, 0.2);
+
+    z-index: 1001;
   }
 
+  /* Open menu */
   .nav-links.active {
     right: 0;
   }
 
-  .nav-links li {
+  /* ==========================================
+     MAIN MENU ITEMS
+  ========================================== */
+
+  .nav-links > li {
     width: 100%;
   }
 
-  .nav-links a {
-    display: block;
+  .nav-links > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     width: 100%;
-    padding: 16px 0;
+
+    padding: 16px 25px;
+
+    box-sizing: border-box;
+
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* ==========================================
+     SERVICES DROPDOWN
+  ========================================== */
+
+  .nav-links > .dropdown {
+    width: 100%;
+  }
+
+  /* Remove desktop positioning */
+  .nav-links > .dropdown > .dropdown-menu {
+    position: static;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 0;
+    margin: 0;
+
+    background: #181818;
+
+    box-shadow: none;
+
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+
+    display: none;
+  }
+
+  /* Open Services */
+  .nav-links > .dropdown.active > .dropdown-menu {
+    display: block;
+  }
+
+  /* Services submenu links */
+  .nav-links > .dropdown > .dropdown-menu > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 14px 25px 14px 40px;
+
+    font-size: 0.78rem;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+    box-sizing: border-box;
+  }
+
+  /* ==========================================
+     SIGNATURE SERVICES SUBMENU
+  ========================================== */
+
+  .nav-links .dropdown-submenu {
+    width: 100%;
+    position: relative;
+  }
+
+  .nav-links .dropdown-submenu > .submenu {
+    position: static;
+
+    width: 100%;
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+
+    background: #202020;
+
+    box-shadow: none;
+
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+
+    display: none;
+  }
+
+  /* Open Signature Services */
+  .nav-links .dropdown-submenu.active > .submenu {
+    display: block;
+  }
+
+  /* Signature submenu links */
+  .nav-links .dropdown-submenu > .submenu > li > a {
+    display: block;
+
+    width: 100%;
+
+    padding: 13px 20px 13px 55px;
+
+    font-size: 0.74rem;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    box-sizing: border-box;
+  }
+
+  /* ==========================================
+     ARROWS
+  ========================================== */
+
+  .nav-links .fa-chevron-down {
+    font-size: 10px;
+    transition: transform 0.25s ease;
+  }
+
+  .nav-links .fa-chevron-right {
+    font-size: 9px;
+    transition: transform 0.25s ease;
+  }
+
+  /* Rotate Services arrow */
+  .nav-links > .dropdown.active > a .fa-chevron-down {
+    transform: rotate(180deg);
+  }
+
+  /* Rotate Signature arrow */
+  .nav-links .dropdown-submenu.active > a .fa-chevron-right {
+    transform: rotate(90deg);
+  }
+
+  /* ==========================================
+     IMPORTANT:
+     Disable desktop hover dropdowns on mobile
+  ========================================== */
+
+  .nav-links > .dropdown:hover > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+  }
+
+  .nav-links > .dropdown.active:hover > .dropdown-menu {
+    display: block;
+  }
+
+  .nav-links .dropdown-submenu:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+  }
+
+  .nav-links .dropdown-submenu.active:hover > .submenu {
+    display: block;
+  }
+
+  /* ==========================================
+     OVERLAY
+  ========================================== */
+
+  .menu-overlay {
+    z-index: 1000;
   }
 }
 .menu-overlay {

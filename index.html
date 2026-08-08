@@ -11,13 +11,15 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.4/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
   <!-- NAV -->
-  <nav>
+    <nav>
     <div class="nav-logo">
       <a href="./">
         <img src="./images/logo/logo.png" alt="EXAdvisory">
@@ -36,11 +38,43 @@
         <a href="./services/">
           Services <i class="fas fa-chevron-down"></i>
         </a>
+
         <ul class="dropdown-menu">
-          <li><a href="./services/founder-to-ceo-transition/">Founder to CEO Transition</a></li>
-          <li><a href="./services/ceo-succession-planning/">CEO Succession Planning</a></li>
-          <li><a href="./services/executive-coaching-for-the-c-suite/">Executive Coaching for the C-Suite</a></li>
-          <li><a href="./services/#primeServices">Prime Services</a></li>
+
+          <!-- Signature Services -->
+          <li class="dropdown-submenu">
+            <a href="./services/#signatureServices">
+              Signature Services
+              <i class="fas fa-chevron-right"></i>
+            </a>
+
+            <!-- Signature Services submenu -->
+            <ul class="submenu">
+              <li>
+                <a href="./services/founder-to-ceo-transition/">
+                  Founder to CEO Transition
+                </a>
+              </li>
+
+              <li>
+                <a href="./services/ceo-succession-planning/">
+                  CEO Succession Planning
+                </a>
+              </li>
+
+              <li>
+                <a href="./services/executive-coaching-for-the-c-suite/">
+                  Executive Coaching for the C-Suite
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="./services/#primeServices">
+              Prime Services
+            </a>
+          </li>
         </ul>
       </li>
 
@@ -90,29 +124,7 @@
     <p>Transform to Perform · Dubai, UAE · DDA Licensed</p>
     <p>© 2026 EXAdvisory. All rights reserved.</p>
   </footer>
-
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    const menuOverlay = document.getElementById('menuOverlay');
-
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      menuOverlay.classList.toggle('active');
-
-      menuToggle.innerHTML =
-        navLinks.classList.contains('active')
-          ? '✕'
-          : '☰';
-    });
-
-    menuOverlay.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      menuOverlay.classList.remove('active');
-      menuToggle.innerHTML = '☰';
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 
 </html>
