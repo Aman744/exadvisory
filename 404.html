@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    // Ensure all assets, logos, and links resolve to the site root regardless of how deeply nested the wrong URL is
+    (function () {
+      var segments = window.location.pathname.split("/").filter(Boolean);
+      var isGitHubProject = window.location.hostname.endsWith("github.io") && segments.length > 0;
+      var baseHref = isGitHubProject ? "/" + segments[0] + "/" : "/";
+      var base = document.createElement("base");
+      base.href = baseHref;
+      document.head.appendChild(base);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | EXAdvisory</title>
+  <meta name="robots" content="noindex, follow" />
+  <meta name="description"
+    content="The page you are looking for could not be found. Return to EXAdvisory homepage or explore our executive advisory services." />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./images/logo/favicon.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css?v=2" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <style>
+    /* ── 404 SPECIFIC SELF-CONTAINED STYLES ── */
+    .error-section {
+      min-height: calc(100vh - 140px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 140px 5% 80px;
+      position: relative;
+    }
+
+    .error-content {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .error-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--orange, #ef7106);
+      margin-bottom: 0.5rem;
+      padding: 6px 16px;
+      background: rgba(239, 113, 6, 0.08);
+      border: 1px solid rgba(239, 113, 6, 0.3);
+      border-radius: 20px;
+    }
+
+    .error-code {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(5.5rem, 14vw, 9rem);
+      font-weight: 700;
+      line-height: 1;
+      color: var(--orange, #ef7106);
+      text-shadow: 0 4px 30px rgba(239, 113, 6, 0.35);
+      margin: 0.5rem 0;
+      letter-spacing: -2px;
+    }
+
+    .error-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      color: var(--white, #ffffff);
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .error-desc {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.85;
+      max-width: 580px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .error-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    }
+
+    .error-btn-secondary {
+      display: inline-block;
+      padding: 14px 34px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: all 0.2s ease;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .error-btn-secondary:hover {
+      border-color: var(--orange, #ef7106);
+      color: var(--orange, #ef7106) !important;
+      background: rgba(239, 113, 6, 0.05);
+      transform: translateY(-2px);
+    }
+
+    .error-quick-links {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 2rem;
+      width: 100%;
+    }
+
+    .error-quick-links p {
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--orange, #ef7106);
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+
+    .error-links-list {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .error-links-list li {
+      margin: 0;
+    }
+
+    .error-links-list a {
+      display: inline-block;
+      padding: 8px 18px;
+      color: rgba(255, 255, 255, 0.8) !important;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .error-links-list a:hover {
+      color: #ffffff !important;
+      border-color: var(--orange, #ef7106);
+      background: rgba(239, 113, 6, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .error-contact-note {
+      margin-top: 2.2rem;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.6;
+    }
+
+    .error-contact-note a {
+      color: var(--orange, #ef7106);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .error-contact-note a:hover {
+      color: #ffffff;
+    }
+
+    button.error-btn-secondary {
+      cursor: pointer;
+      font-family: inherit;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <a href="./">
+        <img src="./images/logo/logo.png" alt="EXAdvisory" />
+      </a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./">Home</a></li>
+      <li><a href="./our-4x-anchor/">Our 4x Anchor</a></li>
+
+      <li class="dropdown">
+        <a href="./services/">
+          Services <i class="fas fa-chevron-down"></i>
+        </a>
+
+        <ul class="dropdown-menu">
+
+          <!-- Signature Services -->
+          <li class="dropdown-submenu">
+            <a href="./services/#signatureServices">
+              Signature Services
+              <i class="fas fa-chevron-right"></i>
+            </a>
+
+            <!-- Signature Services submenu -->
+            <ul class="submenu">
+              <li>
+                <a href="./services/founder-to-ceo-transition/">
+                  Founder to CEO Transition
+                </a>
+              </li>
+
+              <li>
+                <a href="./services/ceo-succession-planning/">
+                  CEO Succession Planning
+                </a>
+              </li>
+
+              <li>
+                <a href="./services/executive-coaching-for-the-c-suite/">
+                  Executive Coaching for the C-Suite
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="./services/#primeServices">
+              Prime Services
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li><a href="./insights/">Insights</a></li>
+      <li><a href="./about/">About</a></li>
+      <li><a href="./contact/">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- 404 SECTION -->
+  <main class="error-section">
+    <div class="error-content">
+      <span class="error-badge"><i class="fas fa-circle-exclamation"></i> 404 Error</span>
+      <div class="error-code">404</div>
+      <h1 class="error-title">Page Not Found</h1>
+      <p class="error-desc">
+        The advisory page, framework, or insight you are looking for does not exist,
+        has been relocated, or is temporarily unavailable. Let us help you find what you need.
+      </p>
+
+      <div class="error-actions">
+        <a href="./" class="hero-cta">Return to Home</a>
+        <button onclick="if(window.history.length>1){window.history.back();}else{window.location.href='./';}" class="error-btn-secondary"><i class="fas fa-arrow-left"></i> Go Back</button>
+        <a href="./services/" class="error-btn-secondary">Explore Services</a>
+        <a href="./contact/" class="error-btn-secondary">Contact Us</a>
+      </div>
+
+      <div class="error-quick-links">
+        <p>Quick Links</p>
+        <ul class="error-links-list">
+          <li><a href="./our-4x-anchor/">4X Leadership Framework</a></li>
+          <li><a href="./services/#signatureServices">Signature Services</a></li>
+          <li><a href="./insights/">Executive Insights</a></li>
+          <li><a href="./about/">About Michael Schulz</a></li>
+        </ul>
+        <p class="error-contact-note">
+          Seeking confidential board or executive counsel?
+          <a href="./contact/">Reach out to Michael Schulz</a> or email
+          <a href="mailto:hello@exadvisory.co">hello@exadvisory.co</a>.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="./images/logo/logo.png" alt="EXAdvisory" />
+    <p>Transform to Perform · Dubai, UAE · DDA Licensed</p>
+    <p>© 2026 EXAdvisory. All rights reserved.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

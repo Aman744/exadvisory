@@ -5,14 +5,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EXAdvisory — Transform to Perform</title>
+  <meta name="description" content="Practitioner-led executive advisory empowering Boards, CEOs, and leadership teams to integrate business performance with business transformation." />
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://exadvisory.co/" />
+  <meta property="og:title" content="EXAdvisory — Transform to Perform" />
+  <meta property="og:description" content="Practitioner-led executive advisory empowering Boards, CEOs, and leadership teams to integrate business performance with business transformation." />
+  <meta property="og:image" content="https://exadvisory.co/images/logo/logo.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EXAdvisory — Transform to Perform" />
+  <meta name="twitter:description" content="Practitioner-led executive advisory empowering Boards, CEOs, and leadership teams to integrate business performance with business transformation." />
+  <meta name="twitter:image" content="https://exadvisory.co/images/logo/logo.png" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "EXAdvisory",
+    "url": "https://exadvisory.co/",
+    "logo": "https://exadvisory.co/images/logo/logo.png",
+    "description": "Practitioner-led executive advisory empowering Boards, CEOs, and leadership teams to integrate business performance with business transformation.",
+    "founder": {
+      "@type": "Person",
+      "name": "Michael Schulz",
+      "jobTitle": "Managing Director"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dubai",
+      "addressCountry": "AE"
+    }
+  }
+  </script>
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./images/logo/favicon.png">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.4/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
@@ -87,7 +120,11 @@
   <!-- HERO -->
   <section class="hero">
 
-
+    <!-- Background Video -->
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="./video/hero-video.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
 
     <!-- Hero Content -->
     <div class="hero-content">
@@ -103,7 +140,7 @@
         business performance with business transformation — simultaneously, not sequentially.
       </p>
 
-      <a href="./services" class="hero-cta">
+      <a href="./services/" class="hero-cta">
         Explore Our Services
       </a>
     </div>

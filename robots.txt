@@ -1,0 +1,8 @@
+# EXAdvisory robots.txt
+User-agent: *
+Allow: /
+
+# Disallow 404 page from indexing
+Disallow: /404.html
+
+Sitemap: https://exadvisory.co/sitemap.xml
