@@ -27,11 +27,7 @@ body {
   color: var(--text);
   line-height: 1.7;
   min-height: 100vh;
-  background-color: #0b0c10;
-  background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(239, 113, 6, 0.08), transparent 70%),
-    radial-gradient(circle at 100% 100%, rgba(239, 113, 6, 0.03), transparent 40%);
-  background-attachment: fixed;
+  background: #080808 url("./video/hero-video.gif") center center / cover no-repeat fixed;
   position: relative;
 }
 
