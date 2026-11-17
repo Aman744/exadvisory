@@ -1,0 +1,4 @@
+# Backups & local dev
+*.bak
+*.log
+__pycache__/
